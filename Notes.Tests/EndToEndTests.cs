@@ -40,7 +40,6 @@ namespace Notes.Tests
 
             // Click on the last "Delete Note" button on the page
             await page.ClickAsync("button:has-text('Delete Note')");
-            //await page.ClickAsync("td:has-text('Test Title') + button:has-text('Delete Note')");
 
             // Verify the note is deleted (waiting for it to disappear from the table)
             await page.WaitForSelectorAsync("td:has-text('Test Title')", new() { State = WaitForSelectorState.Detached });
